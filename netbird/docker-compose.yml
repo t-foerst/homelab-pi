@@ -12,5 +12,6 @@ services:
     environment:
       - NB_SETUP_KEY=${NB_SETUP_KEY}
       - NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL:-https://api.netbird.io}
+      - NB_DISABLE_DNS=true
     volumes:
       - ./client:/etc/netbird

@@ -1,1 +1,7 @@
 .env
+
+# Laufzeit-/State-Daten der Container (enthalten Secrets, hostspezifisch)
+adguard/work/
+adguard/conf/
+grafana/data/
+netbird/client/
