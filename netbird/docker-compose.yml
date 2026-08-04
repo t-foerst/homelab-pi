@@ -1,0 +1,16 @@
+services:
+  netbird:
+    image: netbirdio/netbird:latest
+    container_name: netbird
+    restart: unless-stopped
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      - NB_SETUP_KEY=${NB_SETUP_KEY}
+      - NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL:-https://api.netbird.io}
+    volumes:
+      - ./client:/etc/netbird

@@ -1,0 +1,16 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "3001:3000/tcp"   # Setup-Assistent (einmalig); danach im Web-UI eigenen Port konfigurieren
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "853:853/tcp"     # DNS-over-TLS
+      - "784:784/udp"     # DNS-over-QUIC
+    volumes:
+      - ./work:/opt/adguardhome/work
+      - ./conf:/opt/adguardhome/conf
