@@ -16,4 +16,4 @@ scrape_configs:
 
   - job_name: "node-exporter-backup-server"
     static_configs:
-      - targets: ["backup-server.netbird.cloud:9100"]
+      - targets: ["100.92.156.184:9100"]
