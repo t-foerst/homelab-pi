@@ -3,6 +3,7 @@
 # Laufzeit-/State-Daten der Container (enthalten Secrets, hostspezifisch)
 adguard/work/
 adguard/conf/
-grafana/data/
+monitoring/grafana/data/
+monitoring/prometheus/data/
 netbird/client/
 uptime-kuma/data/
