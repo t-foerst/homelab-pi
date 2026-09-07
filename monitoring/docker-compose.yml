@@ -28,6 +28,15 @@ services:
       - "--path.rootfs=/rootfs"
       - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
 
+  pve-exporter:
+    image: prompt/prometheus-pve-exporter:latest
+    container_name: pve-exporter
+    restart: unless-stopped
+    ports:
+      - "9221:9221"
+    volumes:
+      - ./prometheus/secrets/pve.yml:/etc/prometheus/pve.yml:ro
+
   grafana:
     image: grafana/grafana-oss:latest
     container_name: grafana

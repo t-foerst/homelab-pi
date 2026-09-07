@@ -6,5 +6,6 @@ adguard/conf/
 monitoring/grafana/data/
 monitoring/prometheus/data/
 monitoring/prometheus/secrets/ha_token
+monitoring/prometheus/secrets/pve.yml
 netbird/client/
 uptime-kuma/data/
