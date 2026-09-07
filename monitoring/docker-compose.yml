@@ -8,6 +8,7 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./prometheus/data:/prometheus
+      - ./prometheus/secrets:/etc/prometheus/secrets:ro
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
