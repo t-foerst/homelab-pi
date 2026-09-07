@@ -51,3 +51,6 @@ scrape_configs:
   - job_name: traefik
     static_configs:
       - targets: ["10.10.20.100:30090"]
+  - job_name: velero
+    static_configs:
+      - targets: ["10.10.20.100:30091"]
